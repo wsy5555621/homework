@@ -72,7 +72,7 @@ void TaxCalculatemain(float income);
  */
 
 #include<stdio.h>
-//#include"Taxcalculate.h"   /*若文件分为.h .c 运行,请把此行注释去掉*/
+//#include"Taxcalculate.h"   /*若文件分为.h .c 运行,请把此行注释"//"去掉*/
 
 
 int main()
@@ -94,7 +94,7 @@ int main()
 	int i;
 	for(i=0;i<5;i++)
 	{
-		printf("for the income %.2f \n",test[i]);
+		printf("For the income %.2f \n",test[i]);
 		TaxCalculatemain(test[i]);
 	}
 	printf("*******************************************************\n");
@@ -163,6 +163,7 @@ void SetTaxBase()
 	float taxrank;
 	for(i=0;i<5;i++)
 	{
+		printf("For the no.%d's number:\n",i);
 		scanf("%f",&taxrank);
 		TaxBase[i]=taxrank;
 	}
@@ -176,6 +177,7 @@ void SetTaxRate()
 	float taxrate;
 	for(i=0;i<5;i++)
 	{
+		printf("For the no.%d's rate:\n",i);
 		scanf("%f",&taxrate);
 		TaxRate[i]=taxrate;
 	}
